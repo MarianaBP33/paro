@@ -6,22 +6,42 @@
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-    <ion-item>
-      <ion-label>
+  
+  <ion-grid :fixed="true">
+  <ion-row>
+    <ion-col>
+      <div class="ion-justify-content-center">
+        <ion-img style="width:70%" src="../../assets/icon/logo.png" alt="logo"></ion-img>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <div class="ion-text-center">
         <h1>PARO</h1>
-        <p>Sal de apuros con un paro</p>
-      </ion-label>
-    </ion-item>
-    <template>
+        Sal de apuros con un paro
+      </div>
+    </ion-col>
+  </ion-row>
 
+  <ion-row>
+    <ion-col>
+      <div class="ion-justify-content-center">
+        <ion-button router-link="/Registrar" >Comenzar</ion-button>
+      </div>
+    </ion-col>
+  </ion-row>
 
-  <ion-button>Default</ion-button>
-  <ion-button :disabled="true">Disabled</ion-button>
-</template>
-    
-  <template>
-    <ion-img src="../../assets/logo.png" alt="logo"></ion-img>
-  </template>
+  <ion-row>
+    <ion-col>
+      <div class="ion-text-center">
+        <p class="fs-6" >Version 1.0</p>
+      </div>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+   
 
   <ExploreContainer name="Tab 1 page" />
     </ion-content>  
@@ -33,6 +53,7 @@
   import { defineComponent } from 'vue';
 
   export default defineComponent({
+    name: 'Tab1Page',
     components: { IonImg, IonButton },
   });
 </script>
