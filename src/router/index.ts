@@ -4,7 +4,7 @@ import { RouteRecordRaw } from 'vue-router';
 const routes: Array<RouteRecordRaw> = [
 
       {
-        path: '/tab1',
+        path: '/Inicio',
         component: () => import('@/views/Tab1Page.vue')
       },
       {
