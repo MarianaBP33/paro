@@ -2,37 +2,45 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>main</ion-title>
+        <ion-title></ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-    <ion-item>
-      <ion-label>
-        <h1>PARO</h1>
-        <p>Sal de apuros con un paro</p>
-      </ion-label>
-    </ion-item>
-    <template>
-
-
-  <ion-button>Default</ion-button>
-  <ion-button :disabled="true">Disabled</ion-button>
-</template>
-    
-  <template>
-    <ion-img src="../../assets/logo.png" alt="logo"></ion-img>
-  </template>
-
-  <ExploreContainer name="Tab 1 page" />
+      <ion-grid :fixed="true">
+        <ion-row>
+          <ion-col align="center">
+            <div class="ion-text-center">
+              <p align="center"><ion-img style="width:70%" src="../../assets/logoParo.png" alt="logo"></ion-img></p>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="ion-text-center">
+              <h1>PARO</h1>
+              Sal de apuros con un paro
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="ion-text-center">
+              <ion-button href="/Registrar" >Comenzar</ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="ion-text-center">
+              <p class="fs-6" >Version 1.0</p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-content>  
   </ion-page>
 </template>
 
-<script lang="ts">
-  import { IonImg,  IonButton } from '@ionic/vue';
-  import { defineComponent } from 'vue';
-
-  export default defineComponent({
-    components: { IonImg, IonButton },
-  });
+<script setup lang="ts">
+  import { IonImg,  IonButton, IonCol, IonGrid, IonRow, IonPage  } from '@ionic/vue';
 </script>
