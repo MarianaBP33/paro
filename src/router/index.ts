@@ -34,6 +34,10 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/RetirarPuntos',
         component: () => import('@/views/RetirarPuntos.vue')
+      },
+      {
+        path: '/PagarPuntos',
+        component: () => import('@/views/PagarPuntos.vue')
       }
 
 ]
