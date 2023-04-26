@@ -49,6 +49,13 @@
         <ion-row>
             <ion-col>
                 <div class="ion-text-center">
+                    <ion-button href="/CanjearPuntos" expand="block">Canjear Puntos</ion-button>
+                </div><br /><br />
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <div class="ion-text-center">
                     <ion-button href="/RetirarPuntos" expand="block">Retirar Puntos</ion-button>
                 </div><br /><br />
             </ion-col>

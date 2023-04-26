@@ -38,6 +38,14 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/PagarPuntos',
         component: () => import('@/views/PagarPuntos.vue')
+      },
+      {
+        path: '/CanjearPuntos',
+        component: () => import('@/views/CanjearPuntos.vue')
+      },
+      {
+        path: '/StarBucks',
+        component: () => import('@/views/StarBucks.vue')
       }
 
 ]
