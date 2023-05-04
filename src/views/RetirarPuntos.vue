@@ -12,6 +12,62 @@
         </ion-toolbar>
       </ion-header>
       <ion-content>
+        <ion-row>
+          <ion-col class="ion-text">
+            <h3>Retirar </h3>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col class="ion-text">
+            <p>Agregar cuenta </p>
+          </ion-col>
+
+        </ion-row>
+
+
+      <ion-row>
+        <ion-col class="ion-text">
+        <ion-item>
+    <ion-input placeholder="Numero de tarjeta/cuenta"></ion-input>
+  </ion-item>
+</ion-col>
+        </ion-row>
+
+        <ion-row>
+             <ion-col class="ion-text">
+      
+              </ion-col>
+              <p>Puntos: </p>
+          <ion-item>
+             <ion-input label="Puntos a pagar: " ></ion-input>
+          </ion-item>
+        
+    </ion-row>
+
+            <p>La cantidad minima para retirar es de 100 puntos.</p>
+  
+  
+
+    <ion-row>
+            <ion-col >
+                <ion-card>
+                    <ion-card-header>
+                        <ion-card-subtitle>¡Recuerda!</ion-card-subtitle>
+                        <ion-card-text>Por cada 100 puntos te regresamos 30 MXN.</ion-card-text>
+                    </ion-card-header>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+
+        <ion-col>
+              <div class="ion-text-end">
+                <ion-button href="/RetirarPuntos" >Retirar</ion-button>
+              </div>
+            </ion-col>
+
+
+
 
       </ion-content>
     </ion-page>

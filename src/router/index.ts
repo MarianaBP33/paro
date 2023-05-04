@@ -46,6 +46,30 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/StarBucks',
         component: () => import('@/views/StarBucks.vue')
+      },
+      {
+        path: '/CodigoCanje',
+        component: () => import('@/views/CodigoCanje.vue')
+      }, 
+      {
+        path: '/SinforosaCafe',
+        component: () => import('@/views/SinforosaCafe.vue')
+      },
+      {
+        path: '/BubbaStation',
+        component: () => import('@/views/BubbaStation.vue')
+      },
+      {
+        path: '/TimHortons',
+        component: () => import('@/views/TimHortons.vue')
+      },
+      {
+        path: '/LukaPoke',
+        component: () => import('@/views/LukaPoke.vue')
+      },
+      {
+        path: '/PreguntasFrec',
+        component: () => import('@/views/PreguntasFrec.vue')
       }
 
 ]
