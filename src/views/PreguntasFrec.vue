@@ -16,24 +16,29 @@
             <ion-col >
 
 
-               <h5>¿Pregunta? </h5>
-                <p>Respuesta </p>
+                <h6>¿Puedo pagar con tarjeta? </h6>
+                <p>Si, contamos con método de pago con tarjeta. </p>
+                <br>
 
-                <h5>¿Pregunta? </h5>
-                <p>Respuesta </p>
+                <h6>¿Tienen algun numero de servicio?  </h6>
+                <p>No contamos con un numero al que te puedas comunicar, pero te proporcionamos el siguiente correo de atención soporteparo@gmail.com</p>
+                <br>
 
-                <h5>¿Pregunta? </h5>
-                <p>Respuesta </p>
+                <h6>¿Puedo canjear codigos en otros establecimientos de Queretaro?  </h6>
+                <p>Unicamente puedes cambiar tus codigos en establecimientos dentro de la universidad o en cercanías.</p>
+                <br>
 
-                <h5>¿Pregunta? </h5>
-                <p>Respuesta </p>
+                <h6>¿Cuanto tiempo tardara mi paro en ser terminado?  </h6>
+                <p>Eso depende de la persona que realizará el paro para ti.</p>
+                <br>
 
-                <h5>¿Pregunta? </h5>
-                <p>Respuesta </p>
+                <h6>¿Cuanto tengo que ingresar para pedir mi primer paro?  </h6>
+                <p>Contamos con una variedad de paquetes que puedes elejir antes de solicitar tu primer paro.  </p>
+                <br>
 
-                 <h5>¿Pregunta? </h5>
-                <p>Respuesta </p>
-
+                <h6>¿Todos los productos del establecimiento al que quiero canjera mis puntos, son validos?  </h6>
+                <p>Solo los productos que estan disponible en nuestra App son validos para el canje de codigos. </p>
+                <br>
 
         
 
