@@ -20,12 +20,12 @@
             <ion-col>
                 <ion-list>
                     <ion-item>
-                        <ion-label>Nombre: </ion-label>
-                        <ion-input placeholder="Nombre Completo"></ion-input>
+                        <ion-label>Correo: </ion-label>
+                        <ion-input placeholder="Correo Anáhuac" v-model="user.email"></ion-input>
                     </ion-item>
                     <ion-item>
                         <ion-label>Contraseña: </ion-label>
-                        <ion-input placeholder="Al menos 8 caracteres"  type="password"></ion-input>
+                        <ion-input placeholder="Al menos 8 caracteres" type="password" v-model="user.password"></ion-input>
                     </ion-item><br /><br />
                 </ion-list>
                 <ion-row>
@@ -38,26 +38,75 @@
           <ion-row>
             <ion-col>
               <div class="ion-text-center">
-                <ion-button href="/HomePage" >Ingresar</ion-button>
+                <ion-button @click="login" >Ingresar</ion-button>
               </div><br /><br />
             </ion-col>
+            <ion-toast :is-open="isOpen" @didDismiss="setOpen(false)" :message="passwordIssue" :duration="1500"></ion-toast>
         </ion-row>
         <ion-row>
           <ion-col class="ion-text-center" >
             <span style="mt-5">¿No tienes cuenta?<a href="/Registrar"> Registrate</a></span>
           </ion-col>
         </ion-row>
-          
       </ion-content>
     </ion-page>
 </template>
   
 <script lang="ts">
-  import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonInput, IonItem, IonLabel, IonList } from '@ionic/vue';
-  import { defineComponent } from 'vue';
+  import authApi from '@/api/authApi';
+  import { IonPage, IonHeader, useIonRouter,IonImg, IonToast, IonCol, IonRow, IonButton, IonToolbar, IonTitle, IonContent, IonInput, IonItem, IonLabel, IonList } from '@ionic/vue';
+  import { defineComponent, ref } from 'vue';
 
   export default defineComponent({
     name: 'IniciarSesion',
+    components:{
+      IonInput,
+      IonPage, 
+      IonHeader, 
+      IonToolbar, 
+      IonTitle, 
+      IonContent, 
+      IonItem, 
+      IonLabel, 
+      IonList, 
+      IonCol,
+      IonRow, 
+      IonButton,
+      IonToast,
+      IonImg
+    },
+    data:() =>({
+      user:{
+        email:"",
+        password: "",
+      },
+      ionRouter: useIonRouter(),
+      isOpen:false,
+      passwordIssue:""
+    }),
+    setup() {
+      
+      const isOpenRef = ref(false);
+      const setOpen = (state: boolean) => (isOpenRef.value = state);
+     
+      return { isOpenRef,setOpen };
+      
+
+    },
+    methods:{
+      async login(){
+        const res = await authApi.post("",this.user)
+        if(res.status === 200){
+          console.log('ok')
+          this.ionRouter.push('/HomePage');
+        }else{
+          this.passwordIssue="Correo o Contraseña no existen"
+          this.isOpen = true
+          console.log("correo o contraseña no existen")
+        }
+      }
+    }
+    
   });
 
 </script>
