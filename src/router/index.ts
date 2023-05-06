@@ -48,6 +48,14 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/StarBucks.vue')
       },
       {
+        path: '/ParoProceso',
+        component: () => import('@/views/ParoProceso.vue')
+      },
+      {
+        path: '/ParoFinalizado',
+        component: () => import('@/views/ParoFinalizado.vue')
+      },
+      {
         path: '/CodigoCanje',
         component: () => import('@/views/CodigoCanje.vue')
       }, 

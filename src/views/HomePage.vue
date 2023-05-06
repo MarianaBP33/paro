@@ -29,35 +29,35 @@
         </ion-row>
         <ion-row>
             <ion-col>
-                <div class="ion-text-center" width="50%">
+                <div class="ion-text-center" style="padding-left: 1rem; padding-right:1rem">
                     <ion-button href="/HacerParo" expand="block" >Hacer un Paro</ion-button>
                 </div><br /><br />
             </ion-col>
         </ion-row>
         <ion-row>
             <ion-col>
-                <div class="ion-text-center">
+                <div class="ion-text-center"  style="padding-left: 1rem; padding-right:1rem">
                     <ion-button href="/PedirParo" expand="block">Pedir un Paro</ion-button>
                 </div><br /><br />
             </ion-col>
         </ion-row>
         <ion-row>
             <ion-col>
-                <div class="ion-text-center">
+                <div class="ion-text-center"  style="padding-left: 1rem; padding-right:1rem">
                     <ion-button href="/ComprarPuntos" expand="block">Comprar Puntos</ion-button>
                 </div><br /><br />
             </ion-col>
         </ion-row>
         <ion-row>
             <ion-col>
-                <div class="ion-text-center">
+                <div class="ion-text-center" style="padding-left: 1rem; padding-right:1rem">
                     <ion-button href="/CanjearPuntos" expand="block">Canjear Puntos</ion-button>
                 </div><br /><br />
             </ion-col>
         </ion-row>
         <ion-row>
             <ion-col>
-                <div class="ion-text-center">
+                <div class="ion-text-center" style="padding-left: 1rem; padding-right:1rem">
                     <ion-button href="/RetirarPuntos" expand="block">Retirar Puntos</ion-button>
                 </div><br /><br />
             </ion-col>
