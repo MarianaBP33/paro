@@ -13,7 +13,7 @@
       </ion-header>
       <ion-content>
         <ion-row>
-          <ion-col class="ion-text">
+          <ion-col class="ion-text"  style="padding-left: 1rem; padding-right:1rem">
             <p>Paros disponibles: </p>
           </ion-col>
         </ion-row>
@@ -36,7 +36,7 @@
          
             <ion-col>
               <div class="ion-text-end">
-                <ion-button href="/HacerParo" >Aceptar</ion-button>
+                <ion-button href="/ParoProceso" >Aceptar</ion-button>
               </div>
             </ion-col>
         </ion-row>
@@ -73,7 +73,7 @@
               
               <div class="ion-text-end">
                 
-                <ion-button href="/HacerParo" >Aceptar</ion-button>
+                <ion-button href="/ParoProceso" >Aceptar</ion-button>
                 
               </div>
               

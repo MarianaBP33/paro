@@ -93,7 +93,8 @@ import { IonPage, IonHeader, useIonRouter, IonToolbar, IonToast, alertController
         lastName: "",
         email:"",
         password: "",
-        phone:""
+        phone:"",
+        points:0
       },
       passwordConfirm: "",
       ionRouter: useIonRouter(),

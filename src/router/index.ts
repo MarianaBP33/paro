@@ -46,6 +46,14 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/StarBucks',
         component: () => import('@/views/StarBucks.vue')
+      },
+      {
+        path: '/ParoProceso',
+        component: () => import('@/views/ParoProceso.vue')
+      },
+      {
+        path: '/ParoFinalizado',
+        component: () => import('@/views/ParoFinalizado.vue')
       }
 
 ]

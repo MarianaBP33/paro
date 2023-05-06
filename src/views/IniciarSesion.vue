@@ -96,13 +96,13 @@
     methods:{
       async login(){
         const res = await authApi.post("",this.user)
-        if(res.status === 200){
-          console.log('ok')
-          this.ionRouter.push('/HomePage');
-        }else{
+        if(res.status === 400){
           this.passwordIssue="Correo o Contraseña no existen"
           this.isOpen = true
           console.log("correo o contraseña no existen")
+        }else{
+          console.log('ok')
+          this.ionRouter.push('/HomePage');
         }
       }
     }
