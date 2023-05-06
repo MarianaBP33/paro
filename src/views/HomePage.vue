@@ -8,12 +8,14 @@
                 </ion-button>
             </ion-buttons>
             <ion-title>Bienvenida, Mariana</ion-title>
-             <ion-buttons slot="end">
-                <ion-menu-button :auto-hide="false"></ion-menu-button>
-            </ion-buttons>
         </ion-toolbar>
       </ion-header>
+
+
+
+
       <ion-content>
+
         <ion-row>
             <ion-col >
                 <ion-card>
@@ -64,18 +66,19 @@
       </ion-content>
     </ion-page>
 </template>
-  
+
 <script lang="ts">
-    import { IonIcon, IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel, IonList } from '@ionic/vue';
-    import { personCircle,star } from 'ionicons/icons';
+    import { IonIcon, IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel, IonList, IonMenu, IonRouterOutlet,menuController } from '@ionic/vue';
     import { defineComponent } from 'vue';
+    import { personCircle,star } from 'ionicons/icons';
 
   export default defineComponent({
     name: 'HomePage',
-    components: { IonPage, IonHeader, IonIcon, IonTitle, IonContent, IonToolbar },
+    components: { IonPage, IonHeader, IonIcon, IonTitle,  IonContent, IonToolbar },
     setup() {
       return {  personCircle,star };
-    },
+    }
+
   });
 
 </script>

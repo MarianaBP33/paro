@@ -14,7 +14,7 @@
     <ion-content>
         <ion-row>
           <ion-col class="ion-text">
-            <p>Selecciona un establecimiento </p>
+            <p>Selecciona un establecimiento: </p>
           </ion-col>
         </ion-row>
 
@@ -23,7 +23,7 @@
                 
                     <ion-button expand="block" size= "large" color= "light" href="/StarBucks">
                     Starbucks 
-                    <ion-icon slot="start" name="SB"></ion-icon>
+                    
                     </ion-button>
             </ion-col>
         </ion-row>
@@ -31,9 +31,9 @@
         <ion-row>
             <ion-col >
                 
-                    <ion-button expand="block" size= "large" color= "light" >
+                    <ion-button expand="block" size= "large" color= "light" href="/SinforosaCafe" >
                     Sinforosa
-                    <ion-icon slot="start" name="SB"></ion-icon>
+                   
                     </ion-button>
             </ion-col>
         </ion-row>
@@ -41,9 +41,9 @@
         <ion-row>
             <ion-col >
                 
-                    <ion-button expand="block" size= "large" color= "light" >
+                    <ion-button expand="block" size= "large" color= "light" href="/BubbaStation">
                     Bubba Station 
-                    <ion-icon slot="start" name="SB"></ion-icon>
+                    
                     </ion-button>
             </ion-col>
         </ion-row>
@@ -51,9 +51,9 @@
         <ion-row>
             <ion-col >
                 
-                    <ion-button expand="full" size= "large" color= "light" >
+                    <ion-button expand="full" size= "large" color= "light" href="/TimHortons">
                     Tim Hortons
-                    <ion-icon slot="start" name="SB"></ion-icon>
+                   
                     </ion-button>
             </ion-col>
         </ion-row>
@@ -61,9 +61,9 @@
         <ion-row>
             <ion-col >
                 
-                    <ion-button expand="full" size= "large" color= "light">
+                    <ion-button expand="full" size= "large" color= "light" href="/LukaPoke">
                      Luka
-                    <ion-icon slot="start" name="SB"></ion-icon>
+                
                     </ion-button>
             </ion-col>
         </ion-row>
@@ -76,16 +76,14 @@
 
 
 <script lang="ts">
-    import { IonBackButton, IonPage, IonButtons, IonHeader, IonToolbar, IonTitle, IonContent, IonMenuButton, IonIcon} from '@ionic/vue';
+    import { IonBackButton, IonPage, IonButtons, IonHeader, IonToolbar, IonTitle, IonContent, IonMenuButton} from '@ionic/vue';
     import { defineComponent } from 'vue';
-    import { personCircle,star } from 'ionicons/icons';
+    
 
   export default defineComponent({
     name: 'CanjearPuntos',
-    components: { IonBackButton, IonButtons, IonPage, IonHeader, IonTitle, IonContent, IonToolbar, IonMenuButton, IonIcon },
-    setup() {
-      return {  personCircle,star };
-    },
+    components: { IonBackButton, IonButtons, IonPage, IonHeader, IonTitle, IonContent, IonToolbar, IonMenuButton},
+    
   });
 
 </script>

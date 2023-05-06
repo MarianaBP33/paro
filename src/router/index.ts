@@ -54,6 +54,30 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/ParoFinalizado',
         component: () => import('@/views/ParoFinalizado.vue')
+      },
+      {
+        path: '/CodigoCanje',
+        component: () => import('@/views/CodigoCanje.vue')
+      }, 
+      {
+        path: '/SinforosaCafe',
+        component: () => import('@/views/SinforosaCafe.vue')
+      },
+      {
+        path: '/BubbaStation',
+        component: () => import('@/views/BubbaStation.vue')
+      },
+      {
+        path: '/TimHortons',
+        component: () => import('@/views/TimHortons.vue')
+      },
+      {
+        path: '/LukaPoke',
+        component: () => import('@/views/LukaPoke.vue')
+      },
+      {
+        path: '/PreguntasFrec',
+        component: () => import('@/views/PreguntasFrec.vue')
       }
 
 ]
