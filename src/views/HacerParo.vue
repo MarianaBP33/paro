@@ -13,148 +13,40 @@
       </ion-header>
       <ion-content>
         <ion-row>
-          <ion-col class="ion-text"  style="padding-left: 1rem; padding-right:1rem">
+          <ion-col class="ion-text" style="padding-left: 1rem; padding-right:1rem">
             <p>Paros disponibles: </p>
           </ion-col>
         </ion-row>
 
-        <ion-row>
-            <ion-col >
-                <ion-card>
-                    <ion-card-header>
-                        <ion-card-subtitle>Jose Perez</ion-card-subtitle>
-                        <ion-card-text>Olvide mi cargador de iphone en el A109, estoy en el polideportivo.</ion-card-text>
-        <ion-row>
-          <div>
-              <ion-card>
-                <ion-card-content >
-                  35
-                  <ion-icon :icon="star"></ion-icon>
-                </ion-card-content>
-              </ion-card>
-            </div>
-         
+        <ion-item v-for="(paro,index) in paros" :key="index">
+          <ion-row>
             <ion-col>
-              <div class="ion-text-end">
-                <ion-button href="/ParoProceso" >Aceptar</ion-button>
-              </div>
-            </ion-col>
-        </ion-row>
-                    </ion-card-header>
-                </ion-card>
-            </ion-col>
-        </ion-row>
-
-
-        <ion-row>
-            <ion-col >
-                <ion-card>
-                    <ion-card-header>
-                        <ion-card-subtitle>Maria Hernandez</ion-card-subtitle>
-                        <ion-card-text>Necesito 20 hojas blancas del office, estoy en el B202.</ion-card-text>
-
-
-        
-                        <ion-row>
-                         
-         
-            <div>
               <ion-card>
-                <ion-card-content >
-                  50
-                  <ion-icon :icon="star"></ion-icon>
-                </ion-card-content>
+                <ion-card-header>                    
+                  <ion-card-subtitle>{{ paro.ownerName }}</ion-card-subtitle>
+                    <ion-card-text>{{paro.description}}</ion-card-text>
+                </ion-card-header>
+                <div>
+                  <ion-card>
+                    <ion-card-content style="font-size:large">{{ paro.points }}
+                      <ion-icon :icon="star"></ion-icon>
+                          <ion-button href="/ParoProceso" style="padding-left:5rem" size="30px">Aceptar</ion-button>
+                    </ion-card-content>
+                  </ion-card>
+                </div>
               </ion-card>
-            </div>
-         
-      
-          
-            <ion-col>
-              
-              <div class="ion-text-end">
-                
-                <ion-button href="/ParoProceso" >Aceptar</ion-button>
-                
-              </div>
-              
             </ion-col>
-            
-        </ion-row>
-        
-                    </ion-card-header>
-                </ion-card>
-            </ion-col>
-        </ion-row>
-
-
-        <ion-row>
-            <ion-col >
-                <ion-card>
-                    <ion-card-header>
-                        <ion-card-subtitle>Pablo Lopez</ion-card-subtitle>
-                        <ion-card-text>Deje unos audifonos en un estuche negro en el C112, estoy en el polideportivo.</ion-card-text>
-        <ion-row>
-          <div>
-              <ion-card>
-                <ion-card-content >
-                  20
-                  <ion-icon :icon="star"></ion-icon>
-                </ion-card-content>
-              </ion-card>
-            </div>
-            <ion-col>
-              <div class="ion-text-end">
-                <ion-button href="/HacerParo" >Aceptar</ion-button>
-              </div>
-            </ion-col>
-        </ion-row>
-                    </ion-card-header>
-                </ion-card>
-            </ion-col>
-        </ion-row>
-
-
-        <ion-row>
-            <ion-col >
-                <ion-card>
-                    <ion-card-header>
-                        <ion-card-subtitle>Luisa Valle</ion-card-subtitle>
-                        <ion-card-text>Necesito unas botas para taller, talla 4, estoy en el D102.</ion-card-text>
-        <ion-row>
-
-          <div>
-              <ion-card>
-                <ion-card-content >
-                  45
-                  <ion-icon :icon="star"></ion-icon>
-                </ion-card-content>
-              </ion-card>
-            </div>
-            <ion-col>
-              <div class="ion-text-end">
-                <ion-button href="/HacerParo" >Aceptar</ion-button>
-              </div>
-            </ion-col>
-        </ion-row>
-                    </ion-card-header>
-                </ion-card>
-            </ion-col>
-        </ion-row>
-
-
-
-        
+          </ion-row> 
+        </ion-item>    
       </ion-content>
     </ion-page>
 </template>
   
-
-
-
 <script lang="ts">
     import { IonBackButton, IonPage, IonButtons, IonHeader, IonToolbar, IonTitle, IonContent, IonMenuButton, IonIcon} from '@ionic/vue';
     import { defineComponent } from 'vue';
     import { personCircle,star } from 'ionicons/icons';
+    import paroApi from '@/api/paroApi.';
 
   export default defineComponent({
     name: 'HacerParo',
@@ -162,6 +54,21 @@
     setup() {
       return {  personCircle,star };
     },
+    data:() =>({
+      paros:[] as any[]
+    }),
+
+    created(){
+      this.getParos()
+    },
+
+    methods:{
+      async getParos(){
+        const res = await paroApi.get("")
+        this.paros = res.data
+        console.log(res.data)
+      }
+    }
   });
 
 </script>

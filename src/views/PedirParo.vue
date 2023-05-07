@@ -5,7 +5,7 @@
             <ion-buttons slot="start">
                 <ion-back-button default-href="/HomePage"></ion-back-button>
             </ion-buttons>
-            <ion-title>Pedir un Paro</ion-title>
+            <ion-title >Pedir un Paro</ion-title>
             <ion-buttons slot="end">
                 <ion-menu-button :auto-hide="false">
                 </ion-menu-button>
@@ -16,7 +16,7 @@
 
         <ion-row>
           <ion-col class="ion-text">
-            <p>Descripción: </p>
+            <p style="padding-left: 1rem; padding-right:1rem">Descripción: </p>
           </ion-col>
         </ion-row>
 
@@ -32,7 +32,7 @@
   <div>
     <ion-row>
              <ion-col class="ion-text">
-                <p>Puntos a pagar: </p>
+                <p style="padding-left: 1rem;">Puntos a pagar: </p>
               </ion-col>
           <ion-item>
              <ion-input label="Puntos a pagar: " ></ion-input>
@@ -40,7 +40,7 @@
     </ion-row>
     <ion-col>
               <div class="ion-text-end">
-                <ion-button href="/PedirParo" >Enviar</ion-button>
+                <ion-button href="/PedirParo" style="padding-right: 1rem;">Enviar</ion-button>
               </div>
             </ion-col>
   
